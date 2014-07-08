@@ -6,7 +6,7 @@ public class CoffeeApp {
   private final CoffeeMaker coffeeMaker;
 
   CoffeeApp(Injector injector) {
-    coffeeMaker = injector.get(CoffeeMaker.class);
+    coffeeMaker = (CoffeeMaker)injector.get("CoffeeMaker");
   }
 
   public void run() {

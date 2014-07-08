@@ -1,22 +1,23 @@
 package coffee;
 
+import ca.thurn.infuse.Binder;
 import ca.thurn.infuse.Initializer;
 import ca.thurn.infuse.Injector;
 import ca.thurn.infuse.Module;
 
-public class CoffeeModule extends Module {
+public class CoffeeModule implements Module {
   @Override
-  public void configure() {
-    includeModule(new DripCoffeeModule());
-    bindKey(CoffeeApp.class, new Initializer<CoffeeApp>() {
+  public void configure(Binder binder) {
+    binder.includeModule(new DripCoffeeModule());
+    binder.bindKey("CoffeeApp", new Initializer() {
       @Override
-      public CoffeeApp initialize(Injector injector) {
+      public Object initialize(Injector injector) {
         return new CoffeeApp(injector);
       }
     });
-    bindKey(CoffeeMaker.class, new Initializer<CoffeeMaker>() {
+    binder.bindKey("CoffeeMaker", new Initializer() {
       @Override
-      public CoffeeMaker initialize(Injector injector) {
+      public Object initialize(Injector injector) {
         return new CoffeeMaker(injector);
       }
     });

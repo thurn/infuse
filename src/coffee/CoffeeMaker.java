@@ -7,8 +7,8 @@ public class CoffeeMaker {
   private final Pump pump;
 
   CoffeeMaker(Injector injector) {
-    heater = injector.get(Heater.class);
-    pump = injector.get(Pump.class);
+    heater = (Heater)injector.get("Heater");
+    pump = (Pump)injector.get("Pump");
   }
 
   public void brew() {

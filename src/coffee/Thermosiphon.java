@@ -6,7 +6,7 @@ public class Thermosiphon implements Pump {
   private final Heater heater;
 
   Thermosiphon(Injector injector) {
-    heater = injector.get(Heater.class);
+    heater = (Heater)injector.get("Heater");
   }
 
   @Override
