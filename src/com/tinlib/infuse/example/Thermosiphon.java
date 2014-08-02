@@ -1,12 +1,12 @@
-package coffee;
+package com.tinlib.infuse.example;
 
-import ca.thurn.infuse.Injector;
+import com.tinlib.infuse.Injector;
 
 public class Thermosiphon implements Pump {
   private final Heater heater;
 
   Thermosiphon(Injector injector) {
-    heater = (Heater)injector.get("Heater");
+    heater = injector.get(Heater.class);
   }
 
   @Override

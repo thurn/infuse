@@ -1,4 +1,4 @@
-package coffee;
+package com.tinlib.infuse.example;
 
 public interface Heater {
   void on();

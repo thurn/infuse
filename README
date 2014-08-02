@@ -1,3 +1,3 @@
 Infuse is a dependency injection microframework for Java. Its goal is to provide a useful subset of the features in frameworks like Guice and Dagger in a few hundred lines of code without using reflection or code generation. Its design is intentionally extremely simple -- it's effectively just a pattern for using factory functions in your code. The largest benefit of following this pattern is consistency; all objects in your application will have a common way of specifying their dependencies.
 
-The src/coffee directory contains an example of how to use Infuse in your own code, following the example of creating a coffee-maker application from Dagger.
+The com.tinlib.infuse.example package contains an example of how to use Infuse in your own code, following the example of creating a coffee-maker application from Dagger.

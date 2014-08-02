@@ -1,12 +1,12 @@
-package coffee;
+package com.tinlib.infuse.example;
 
-import ca.thurn.infuse.Injector;
+import com.tinlib.infuse.Injector;
 
 public class CoffeeApp {
   private final CoffeeMaker coffeeMaker;
 
   CoffeeApp(Injector injector) {
-    coffeeMaker = (CoffeeMaker)injector.get("CoffeeMaker");
+    coffeeMaker = injector.get(CoffeeMaker.class);
   }
 
   public void run() {

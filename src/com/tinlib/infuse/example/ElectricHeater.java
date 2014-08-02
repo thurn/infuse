@@ -1,4 +1,4 @@
-package coffee;
+package com.tinlib.infuse.example;
 
 public class ElectricHeater implements Heater {
   boolean heating;

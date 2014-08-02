@@ -1,4 +1,4 @@
-package ca.thurn.infuse;
+package com.tinlib.infuse;
 
 public interface Module {
   public void configure(Binder binder);
